@@ -1,19 +1,42 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>APIS</title>
+  <meta charset="UTF-8">
+  <title>NASA APOD - Astronomy Picture of the Day</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <header>
+    <h1>BIENVENIDOS A LA NASA</h1>
+    <p>Consulte cualquier imagen astronoma de algún día especifico</p>
+  </header>
+
+  <main>
     <div>
-        <h1>BIENVENIDO A LA NASA</h1>
+      <h2>Foto del día</h2>
+      <button id="btnDia">Ver foto de hoy</button>
+      <div id="fotoDia" class="card"><img id="imgDia" src="" alt=""></div>
     </div>
+
     <div>
-        <h2 id="t">Imagen del día </h2>
-        <img id="i" src="" alt="">
+      <h2>Foto por fecha</h2>
+      <input type="date" id="inputFecha">
+      <button id="btnFecha">Buscar</button>
+      <div id="fotoFecha" class="card"><img id="imgFecha" src="" alt=""></div>
     </div>
+
+    <div>
+      <h2>Fotos aleatorias</h2>
+      <input type="number" id="inputCount" min="1" max="10" placeholder="Cantidad (1-10)">
+      <button id="btnCount">Buscar</button>
+      <div id="fotosRandom" class="grid"><img src="imgRandom" alt=""></div>
+    </div>
+  </main>
+
+  <footer>
+    <p>Hecha por: Gonzalo Saitúa</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
-<script src="index.js"></script>
 </html>
