@@ -13,23 +13,23 @@
 
   <main>
     <div>
-      <h2>Foto del día</h2>
+      <h2 id="tituloDia">Foto del día</h2>
+      <div id="contenedorDia" class="card"><img id="imgDia" src="" alt=""></div>
       <button id="btnDia">Ver foto de hoy</button>
-      <div id="fotoDia" class="card"><img id="imgDia" src="" alt=""></div>
     </div>
 
     <div>
-      <h2>Foto por fecha</h2>
+      <h2 id="tituloFecha">Foto por fecha</h2>
       <input type="date" id="inputFecha">
       <button id="btnFecha">Buscar</button>
-      <div id="fotoFecha" class="card"><img id="imgFecha" src="" alt=""></div>
+      <div id="contenedorFecha" class="card"><img id="imgFecha" src="" alt=""></div>
     </div>
 
     <div>
       <h2>Fotos aleatorias</h2>
       <input type="number" id="inputCount" min="1" max="10" placeholder="Cantidad (1-10)">
-      <button id="btnCount">Buscar</button>
-      <div id="fotosRandom" class="grid"><img src="imgRandom" alt=""></div>
+      <button id="btnRandom">Buscar</button>
+      <div id="fotoRandom" class="grid"><img id="imgRandom" src="" alt=""></div>
     </div>
   </main>
 
@@ -37,6 +37,6 @@
     <p>Hecha por: Gonzalo Saitúa</p>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="index.js"></script>
 </body>
 </html>
