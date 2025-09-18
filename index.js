@@ -36,14 +36,14 @@ botonFecha.onclick = function() {
 }
 
 //Foto rango de fechas
-const contendedorRango = document.querySelector('#contenedorRango');
+const contenedorRango = document.querySelector('#contenedorRango');
 const botonRango = document.querySelector('#btnRango');
 const inputInicio = document.querySelector('#inputStart');
 const inputFinal = document.querySelector('#inputEnd')
 const tituloRango = document.querySelector('#tituloRango');
 
 botonRango.onclick = function() {
-    console.log(inputInicio.value & inputFinal.value);
+    console.log(inputInicio.value +""+ inputFinal.value);
     fetch(`https://api.nasa.gov/planetary/apod?api_key=${apiKey}&start_date=${inputInicio.value}&end_date=${inputFinal.value}`)
     .then(res => res.json())
     .then(fotoRango => {
@@ -51,8 +51,12 @@ botonRango.onclick = function() {
             tituloRango.textContent = "Error";
             contenedorRango.innerHTML = `<p>Fecha inválida o fuera de rango. Intenta con otra fecha.</p>`;
         } else {
-            tituloRango.textContent = fotoRango.title;
-            contenedorRango.innerHTML = `<img id="imgRango" src="${fotoRango.hdurl}" alt=""> <p>${fotoRango.explanation}</p>`;
+            for (let i = 0; i < fotoRango.length; i++) {
+                contenedorRango.innerHTML = `<img id="imgFecha" src="${fotoRango[i].hdurl}" alt=""> <p>${fotoRango[i].explanation}</p>`
+                tituloRango.textContent = fotoRango[i].title;
+            }
+            /*tituloRango.textContent = fotoRango.title;
+            contenedorRango.innerHTML = `<img id="imgRango" src="${fotoRango.hdurl}" alt=""> <p>${fotoRango.explanation}</p>`;*/
         }
     });
 }
