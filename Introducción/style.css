@@ -1,0 +1,240 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: linear-gradient(135deg, #0f2027 0%, #2c5364 100%);
+  color: #f1f1f1;
+  min-height: 100vh;
+}
+
+header {
+  background: rgba(20, 30, 48, 0.95);
+  padding: 2rem 0 1rem 0;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+header h1 {
+  font-size: 2.5rem;
+  letter-spacing: 2px;
+  margin-bottom: 0.5rem;
+  color: #ffd700;
+  text-shadow: 1px 1px 8px #222;
+}
+
+header p {
+  font-size: 1.1rem;
+  color: #b0c4de;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem 1rem;
+}
+
+main > div {
+  background: rgba(44, 83, 100, 0.95);
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.25);
+  padding: 2rem 1.5rem;
+  min-width: 320px;
+  max-width: 400px;
+  flex: 1 1 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h2 {
+  color: #ffd700;
+  margin-bottom: 1rem;
+  text-shadow: 1px 1px 6px #222;
+}
+
+#contenedorDia, #contenedorFecha {
+  width: 100%;
+  min-height: 220px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+#imgDia, #imgFecha {
+  width: 100%;
+  max-width: 350px;
+  max-height: 220px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.3);
+  background: #222;
+}
+
+input[type="date"] {
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  border: none;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  background: #f1f1f1;
+  color: #222;
+  outline: none;
+  transition: box-shadow 0.2s;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+}
+
+input[type="date"]:focus {
+  box-shadow: 0 0 0 2px #ffd700;
+}
+
+button {
+  padding: 0.6rem 1.5rem;
+  border-radius: 6px;
+  border: none;
+  background: linear-gradient(90deg, #ffd700 60%, #ff9800 100%);
+  color: #222;
+  font-weight: bold;
+  font-size: 1.1rem;
+  cursor: pointer;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  transition: background 0.2s, transform 0.1s;
+}
+
+button:hover {
+  background: linear-gradient(90deg, #ff9800 60%, #ffd700 100%);
+  transform: translateY(-2px) scale(1.03);
+}
+
+#contenedorDia p, #contenedorFecha p {
+  color: #f1f1f1;
+  background: rgba(20, 30, 48, 0.7);
+  padding: 0.7rem 1rem;
+  border-radius: 8px;
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  text-align: justify;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.12);
+}
+
+footer {
+  background: rgba(20, 30, 48, 0.95);
+  color: #b0c4de;
+  text-align: center;
+  padding: 1rem 0;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  box-shadow: 0 -2px 8px rgba(0,0,0,0.2);
+}
+@media (max-width: 900px) {
+  main {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+  main > div {
+    max-width: 95vw;
+  }
+  #imgDia, #imgFecha {
+    max-width: 95vw;
+  }
+}
+
+
+label[for="startDate"], label[for="endDate"] {
+  color: #ffd700;
+  font-weight: bold;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+  display: inline-block;
+}
+
+
+#inputStart, #inputEnd {
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+  min-width: 140px;
+}
+
+
+#btnRango {
+  margin-bottom: 1rem;
+  margin-top: 0.5rem;
+  display: block;
+}
+
+
+#contenedorRango {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  align-items: start;
+}
+
+
+#contenedorRango img {
+  width: 100%;
+  max-width: 350px;
+  max-height: 220px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 0.5rem;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.3);
+  background: #222;
+}
+
+
+#contenedorRango p {
+  color: #f1f1f1;
+  background: rgba(20, 30, 48, 0.7);
+  padding: 0.7rem 1rem;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  text-align: justify;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.12);
+  margin-bottom: 1rem;
+}
+
+
+@media (max-width: 900px) {
+  #contenedorRango {
+    grid-template-columns: 1fr;
+    max-width: 95vw;
+  }
+  #contenedorRango img {
+    max-width: 95vw;
+  }
+}
+#boton-enlace {
+  display: inline-block;
+  padding: 0.7em 1.5em;
+  background: #1e3a8a;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 8px;
+  text-decoration: none;
+  box-shadow: 0 2px 8px rgba(30,58,138,0.15);
+  transition: background 0.2s, transform 0.2s;
+  border: none;
+  cursor: pointer;
+}
+
+#boton-enlace:hover {
+  background: #2563eb;
+  transform: translateY(-2px) scale(1.04);
+}
