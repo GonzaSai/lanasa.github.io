@@ -1,4 +1,4 @@
-//* * {
+ * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -148,6 +148,75 @@ footer {
     max-width: 95vw;
   }
   #imgDia, #imgFecha {
+    max-width: 95vw;
+  }
+}
+
+/* Estilos para los labels de rango de fechas */
+label[for="startDate"], label[for="endDate"] {
+  color: #ffd700;
+  font-weight: bold;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+  display: inline-block;
+}
+
+/* Inputs de rango de fechas alineados */
+#inputStart, #inputEnd {
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+  min-width: 140px;
+}
+
+/* Botón de rango de fechas */
+#btnRango {
+  margin-bottom: 1rem;
+  margin-top: 0.5rem;
+  display: block;
+}
+
+/* Contenedor de rango de fechas: grid para varias imágenes */
+#contenedorRango {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  align-items: start;
+}
+
+/* Imágenes dentro del rango */
+#contenedorRango img {
+  width: 100%;
+  max-width: 350px;
+  max-height: 220px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 0.5rem;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.3);
+  background: #222;
+}
+
+/* Explicaciones dentro del rango */
+#contenedorRango p {
+  color: #f1f1f1;
+  background: rgba(20, 30, 48, 0.7);
+  padding: 0.7rem 1rem;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  text-align: justify;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.12);
+  margin-bottom: 1rem;
+}
+
+/* Responsive para el contenedor de rango */
+@media (max-width: 900px) {
+  #contenedorRango {
+    grid-template-columns: 1fr;
+    max-width: 95vw;
+  }
+  #contenedorRango img {
     max-width: 95vw;
   }
 }
